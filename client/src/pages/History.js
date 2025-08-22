@@ -90,7 +90,8 @@ const History = () => {
     } finally {
       setLoading(false);
     }
-  }, [pagination.current, pagination.pageSize, filters]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [pagination.current, pagination.pageSize, filters.category]);
 
   useEffect(() => {
     fetchHistory();
