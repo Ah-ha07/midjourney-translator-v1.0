@@ -1,0 +1,89 @@
+.app-header {
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 0;
+  height: 64px;
+  line-height: 64px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  height: 100%;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-icon {
+  font-size: 28px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.logo-text {
+  margin: 0 !important;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.header-menu {
+  background: transparent !important;
+  border-bottom: none !important;
+  line-height: 62px;
+}
+
+.header-menu .ant-menu-item {
+  border-bottom: 2px solid transparent !important;
+  transition: all 0.3s ease;
+  margin: 0 8px;
+  border-radius: 8px 8px 0 0;
+}
+
+.header-menu .ant-menu-item:hover {
+  background: rgba(102, 126, 234, 0.1) !important;
+  color: #667eea !important;
+}
+
+.header-menu .ant-menu-item-selected {
+  background: rgba(102, 126, 234, 0.1) !important;
+  border-bottom-color: #667eea !important;
+  color: #667eea !important;
+}
+
+.header-menu .ant-menu-item-selected::after {
+  border-bottom-color: #667eea !important;
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    padding: 0 16px;
+  }
+  
+  .logo-text {
+    font-size: 16px;
+  }
+  
+  .header-menu .ant-menu-item {
+    margin: 0 4px;
+    padding: 0 12px;
+  }
+}

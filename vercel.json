@@ -1,0 +1,33 @@
+{
+  "version": 2,
+  "name": "midjourney-translator",
+  "builds": [
+    {
+      "src": "server/index.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "client/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "build"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/server/index.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/client/$1"
+    }
+  ],
+  "env": {
+    "DEEPSEEK_API_KEY": "@deepseek-api-key",
+    "GEMINI_API_KEY": "@gemini-api-key",
+    "DEFAULT_TRANSLATE_PROVIDER": "deepseek",
+    "NODE_ENV": "production"
+  }
+}

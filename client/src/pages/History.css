@@ -1,0 +1,119 @@
+.history-page {
+  min-height: 100vh;
+  padding: 24px;
+  background: transparent;
+}
+
+.history-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.history-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.page-title {
+  margin-bottom: 8px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.page-icon {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.page-description {
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.stats-row {
+  margin-bottom: 24px;
+}
+
+.stats-row .ant-card {
+  text-align: center;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.filter-card {
+  margin-bottom: 24px;
+  background: rgba(102, 126, 234, 0.05);
+  border: 1px solid rgba(102, 126, 234, 0.2);
+}
+
+.detail-content {
+  padding: 16px 0;
+}
+
+.detail-section {
+  margin-bottom: 24px;
+}
+
+.detail-text {
+  background: #fafafa;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #f0f0f0;
+  margin-bottom: 16px;
+  word-break: break-word;
+  white-space: pre-wrap;
+}
+
+.ant-table-thead > tr > th {
+  background: rgba(102, 126, 234, 0.05) !important;
+  font-weight: 600;
+}
+
+.ant-table-tbody > tr:hover > td {
+  background: rgba(102, 126, 234, 0.02) !important;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .history-page {
+    padding: 16px;
+  }
+  
+  .page-title {
+    font-size: 24px;
+  }
+  
+  .stats-row .ant-col {
+    margin-bottom: 16px;
+  }
+  
+  .filter-card .ant-row {
+    gap: 16px;
+  }
+  
+  .filter-card .ant-col {
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .ant-table {
+    font-size: 12px;
+  }
+  
+  .ant-table-thead > tr > th,
+  .ant-table-tbody > tr > td {
+    padding: 8px 4px;
+  }
+  
+  .detail-content .ant-row {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
