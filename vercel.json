@@ -25,9 +25,8 @@
     }
   ],
   "env": {
-    "DEEPSEEK_API_KEY": "@deepseek-api-key",
-    "GEMINI_API_KEY": "@gemini-api-key",
     "DEFAULT_TRANSLATE_PROVIDER": "deepseek",
     "NODE_ENV": "production"
   }
 }
+
